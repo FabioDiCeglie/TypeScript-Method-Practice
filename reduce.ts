@@ -15,6 +15,8 @@ const reducer = (prev: any, vote: any) => {
 
 const result = votes.reduce(reducer, initialValue);
 
+// ----------------------------------------
+
 //Use Reduce to Filter and Map over large datasets
 
 const data = [1, 2, 3];
@@ -38,9 +40,13 @@ const evens = data2.reduce((acc: number[], value: number) => {
 // and you use reduce method gonna take much less time if you do the two operations
 // together with map and filter gonna take 76ms but with reduce 54ms
 
+// ----------------------------------------
+
 // Avoid common mistakes when working with Reduce
 // 1. Always pass in an initial value for your accumulator
 // 2. Always make sure that you return the accumulator
+
+// ----------------------------------------
 
 // Learn to Flatten and Flatmap arrays with Reduce
 
@@ -102,9 +108,11 @@ function double(input: number) {
 // let'use a functional composition
 const pipeline = [increment, decrement, double];
 
+// You can use the reduceRight too!
 const final_value = pipeline.reduce((acc, value) => {
   return value(acc);
 }, 1);
 
 // result 4
-console.log(final_value);
+
+// ----------------------------------------
