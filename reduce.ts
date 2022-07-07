@@ -1,3 +1,4 @@
+// Reduce an Array into a Single Object and count the duplicated string
 const votes = ["angular", "react", "vanilla", "angular", "react", "vanilla"];
 
 const initialValue = {};
