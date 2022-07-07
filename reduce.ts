@@ -37,3 +37,53 @@ const evens = data2.reduce((acc: number[], value: number) => {
 // The best is to write filter and map here but if you have a big array
 // and you use reduce method gonna take much less time if you do the two operations
 // together with map and filter gonna take 76ms but with reduce 54ms
+
+// Avoid common mistakes when working with Reduce
+// 1. Always pass in an initial value for your accumulator
+// 2. Always make sure that you return the accumulator
+
+// Learn to Flatten and Flatmap arrays with Reduce
+
+const someData = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+const flattenedData = someData.reduce((acc, value) => {
+  return acc.concat(value);
+}, []);
+
+// console.log(flattenedData); //[ 1,2,3,4,5,6,7,8,9]
+
+// We gonna use flatMap for get this ["test1",'test2','test3','test4']
+const input = [
+  {
+    title: "test",
+    cast: ["test1", "test2"],
+  },
+  {
+    title: "test2",
+    cast: ["test3", "test4"],
+  },
+  {
+    title: "test",
+    cast: ["test1", "test2"],
+  },
+  {
+    title: "test2",
+    cast: ["test3", "test4"],
+  },
+];
+
+const stars = input.reduce((acc: string[], value) => {
+  value.cast.forEach((star) => {
+    console.log(acc.indexOf(star));
+    if (acc.indexOf(star) === -1) {
+      acc.push(star);
+    }
+  });
+  return acc;
+}, []);
+
+// ["test1",'test2','test3','test4']
