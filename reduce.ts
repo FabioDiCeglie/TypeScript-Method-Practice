@@ -54,7 +54,7 @@ const flattenedData = someData.reduce((acc, value) => {
   return acc.concat(value);
 }, []);
 
-// console.log(flattenedData); //[ 1,2,3,4,5,6,7,8,9]
+// result [ 1,2,3,4,5,6,7,8,9]
 
 // We gonna use flatMap for get this ["test1",'test2','test3','test4']
 const input = [
@@ -78,7 +78,6 @@ const input = [
 
 const stars = input.reduce((acc: string[], value) => {
   value.cast.forEach((star) => {
-    console.log(acc.indexOf(star));
     if (acc.indexOf(star) === -1) {
       acc.push(star);
     }
@@ -86,4 +85,26 @@ const stars = input.reduce((acc: string[], value) => {
   return acc;
 }, []);
 
-// ["test1",'test2','test3','test4']
+//result ["test1",'test2','test3','test4']
+
+// Composing functions with reduce
+
+function increment(input: number) {
+  return input + 2;
+}
+function decrement(input: number) {
+  return input - 1;
+}
+function double(input: number) {
+  return input * 2;
+}
+
+// let'use a functional composition
+const pipeline = [increment, decrement, double];
+
+const final_value = pipeline.reduce((acc, value) => {
+  return value(acc);
+}, 1);
+
+// result 4
+console.log(final_value);
