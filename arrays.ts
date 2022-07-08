@@ -26,3 +26,51 @@ const people2 = [
 const ex = people.concat(people2).forEach((person) => {
   console.log(person.name);
 });
+
+// -----------------------------------------------------
+
+// Combine values of an Array into a String with Join
+
+const names: string[] = ["S", "J"];
+
+const nameWithSpace: string = names.join(" ");
+
+const name2 = "shane osbourne";
+
+const upper = name2
+  .split(" ")
+  .map((x) => x.charAt(0).toUpperCase() + x.slice(1))
+  .join(" ");
+
+// ---------------------
+
+// Check if a value is in an Array with indexOf
+
+const family: string[] = ["Giuseppe", "Shane", "Aida", "Isaac"];
+
+const search: number = family.indexOf("Giuseppe"); // 1
+
+const fail: number = family.indexOf("ciao"); // -1
+
+const searchFailAgain: number = family.indexOf("Giuseppe", 1); // -1 Because start from index 1
+
+// filter with indexOf
+
+const whiteList: string[] = ["css", "js"];
+
+const events = [
+  {
+    file: "css",
+  },
+  {
+    file: "js",
+  },
+  {
+    file: "index",
+  },
+];
+
+const filter = events.filter((e) => {
+  var ext = require("path").extname(e.file);
+  return whiteList.indexOf(ext) > 1;
+});
