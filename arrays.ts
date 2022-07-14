@@ -75,6 +75,8 @@ const filter = events.filter((e) => {
   return whiteList.indexOf(ext) > 1;
 });
 
+// ------------------------------------------
+
 // Create a shallow copy of an array slice
 
 const person = { name: "Shane" };
@@ -92,6 +94,8 @@ const slice = items2.slice(1, -1);
 // console.log(copy2)  [1, {name: "Ciao"}]
 // console.log(slice)  [2,3,4,5,6,7]
 
+// ------------------------------------------
+
 // Sort an Array alphabetically or numerically
 
 const array2 = [10, 20, 2, 30];
@@ -106,6 +110,8 @@ array2.sort();
 const array3 = [10, 20, 2, 30];
 
 array3.sort((a: number, b: number) => a - b); // [2,10,20,30]
+
+// ------------------------------------------
 
 // Use Some as a ternary operator or conditional
 
@@ -131,9 +137,13 @@ function addTask(title) {
 
 addTask("Feed the cat");
 
+// ------------------------------------------
+
 // Add elements into an array with push
 
 const pets = ["Cat"];
 const wishlist = ["Hamster"];
 
 pets.push.apply(pets, wishlist); // [Cat,Hamster]
+
+// ------------------------------------------
