@@ -147,3 +147,22 @@ const wishlist = ["Hamster"];
 pets.push.apply(pets, wishlist); // [Cat,Hamster]
 
 // ------------------------------------------
+
+// Validate data with the every() method
+
+var tasks2 = [
+  {
+    title: "Do Laundry",
+    errors: [],
+  },
+  {
+    title: "Feed the cat",
+    errors: [],
+  },
+  {
+    title: "Feed",
+    errors: ["No name"],
+  },
+];
+
+const isValid = tasks2.every((x) => x.errors.length === 0); // false
