@@ -74,3 +74,20 @@ const filter = events.filter((e) => {
   var ext = require("path").extname(e.file);
   return whiteList.indexOf(ext) > 1;
 });
+
+// Create a shallow copy of an array slice
+
+const person = { name: "Shane" };
+const items2 = [1, 2, 3, 4, 5];
+const items3 = [1, person];
+
+const copy = items2.slice();
+const copy2 = items3.slice();
+// @ts-ignore
+copy2[1].name = "Ciao";
+
+const slice = items2.slice(1, -1);
+
+// console.log(copy)   [1,2,3,4,5]
+// console.log(copy2)  [1, {name: "Ciao"}]
+// console.log(slice)  [2,3,4,5,6,7]
