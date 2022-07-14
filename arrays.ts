@@ -91,3 +91,18 @@ const slice = items2.slice(1, -1);
 // console.log(copy)   [1,2,3,4,5]
 // console.log(copy2)  [1, {name: "Ciao"}]
 // console.log(slice)  [2,3,4,5,6,7]
+
+// Sort an Array alphabetically or numerically
+
+const array2 = [10, 20, 2, 30];
+
+array2.sort();
+
+// console.log(array2) [10,2,20,30]
+
+// So we need to use a compare function
+// With string you can compare the length a.length - b.length
+
+const array3 = [10, 20, 2, 30];
+
+array3.sort((a: number, b: number) => a - b); // [2,10,20,30]
