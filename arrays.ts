@@ -130,3 +130,10 @@ function addTask(title) {
 }
 
 addTask("Feed the cat");
+
+// Add elements into an array with push
+
+const pets = ["Cat"];
+const wishlist = ["Hamster"];
+
+pets.push.apply(pets, wishlist); // [Cat,Hamster]
