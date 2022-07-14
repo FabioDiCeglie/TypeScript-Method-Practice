@@ -106,3 +106,27 @@ array2.sort();
 const array3 = [10, 20, 2, 30];
 
 array3.sort((a: number, b: number) => a - b); // [2,10,20,30]
+
+// Use Some as a ternary operator or conditional
+
+var tasks = [
+  {
+    title: "Do Laundry",
+  },
+  {
+    title: "Feed the cat",
+  },
+  {
+    title: "Feed",
+  },
+];
+
+function addTask(title) {
+  if (tasks.some((task) => task.title === title)) {
+    // this is a duplicate so doesn't push and for this we use some method
+    return;
+  }
+  tasks.push({ title: title });
+}
+
+addTask("Feed the cat");
