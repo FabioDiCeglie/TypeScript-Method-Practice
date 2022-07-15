@@ -74,3 +74,36 @@ login2(meth, ...opt);
 // NaN compare with itself is always false
 
 // -------------------------
+
+// What are function closures?
+
+var fooo = [];
+for (var i = 0; i < 10; i++) {
+  // @ts-ignore
+  fooo[i] = function () {
+    return i;
+  };
+}
+
+// console.log(fooo[0]());
+// console.log(fooo[1]());
+// console.log(fooo[2]());
+
+// it print 10 10 10
+// when we return i we gonna return always 10
+// if we want to return 1-2-3
+
+var foooo: any[] = [];
+for (var i = 0; i < 10; i++) {
+  (function () {
+    let y = i;
+    // @ts-ignore
+    foooo[i] = function () {
+      return y;
+    };
+  })();
+}
+// console.log(foooo[0]());
+// console.log(foooo[1]());
+
+// it print 0-1
