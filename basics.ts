@@ -27,10 +27,29 @@ fee(b);
 
 // -----------------------------------
 
-// REST operators
+// REST operator
 
 const login = (method: string, ...options: number[]) => {
   //   console.log(method); // facebook
   //   console.log(options); // ["facebook", 1,2,3,4]
 };
 login("facebook", 1, 2, 3, 4);
+
+// Spread operator
+
+// looks like the rest operator but as a different effect
+
+const ar1 = [4, 5, 6];
+const ar2 = [1, 2, 3, ...ar1]; // [ 1,2,3,4,5,6]
+const copyArray = [...ar1];
+
+const meth = "facebook";
+const opt = ["ciao", "ciao"];
+const login2 = (method: string, ...options: string[]) => {
+  //   console.log(method); // facebook
+  //   console.log(options); // [ "ciao", "ciao"]
+};
+login2(meth, ...opt);
+
+// Use spread operators for manipulating arrays and then also when
+// you want to explode arguments and pass it in a function.
