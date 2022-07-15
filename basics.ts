@@ -107,3 +107,23 @@ for (var i = 0; i < 10; i++) {
 // console.log(foooo[1]());
 
 // it print 0-1
+
+// --------------------------------------------------
+
+// Destructuring & Looping
+
+// Destructuring
+const obj = { first: "Asim", last: "Hus", age: 40 };
+
+const { first: f, last: l } = obj;
+// Better this way
+const { first, last } = obj;
+// console.log(f) first: "Asim"
+// console.log(l) last: "Hus"
+
+// Array destructuring
+
+const arr = ["a", "b"];
+const [x, y] = arr;
+// console.log(x) a
+// console.log(y) b
