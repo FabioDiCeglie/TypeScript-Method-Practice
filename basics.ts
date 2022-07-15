@@ -130,4 +130,19 @@ const [x, y] = arr;
 
 // --------------------------------------------------
 
-// Loop
+// For-in Loop in object properties doesn t work in array
+
+const obje = { a: 1, b: 2 };
+
+for (let prop in obj) {
+  //   console.log(prop); a b
+}
+
+// For-of we use it for array
+
+let array = [1, 2, 3];
+for (let prop of array) {
+  //   console.log(prop); 1 2 3
+}
+
+// --------------------------------------------------
