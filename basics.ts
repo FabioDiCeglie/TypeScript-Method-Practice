@@ -15,7 +15,8 @@ foo(a);
 // and you change that proprety whitin the function
 // the change will be reflected in the outer scope
 const b = {};
-const fee = (b) => {
+const fee = (b: {}) => {
+  // @ts-ignore
   b.moo = false;
 };
 fee(b);
@@ -26,4 +27,10 @@ fee(b);
 
 // -----------------------------------
 
-//
+// REST operators
+
+const login = (method: string, ...options: number[]) => {
+  //   console.log(method); // facebook
+  //   console.log(options); // ["facebook", 1,2,3,4]
+};
+login("facebook", 1, 2, 3, 4);
