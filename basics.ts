@@ -130,6 +130,8 @@ const [x, y] = arr;
 
 // --------------------------------------------------
 
+// In ForEach we can t use break and continue statement remember!
+
 // For-in Loop in object properties doesn t work in array
 
 const obje = { a: 1, b: 2 };
