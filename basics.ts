@@ -53,3 +53,24 @@ login2(meth, ...opt);
 
 // Use spread operators for manipulating arrays and then also when
 // you want to explode arguments and pass it in a function.
+
+// --------------------------------
+
+// Primitive types
+// Boolean-Number-String-Null-Undefined-Object
+
+// Differents from == and ===
+// Double quotes try to convert the type
+// "" == "0"; // false
+// "0" == "0"; // true
+// 0 == "0"; //true convert 0 in type string
+// false == "false"; //false because try to convert the boolean in a string not working!
+// // Look also the equality table
+
+// triple equals return true only if the value and the type
+// 0 === " "; // false
+// 0 === "0"; // false
+
+// NaN compare with itself is always false
+
+// -------------------------
