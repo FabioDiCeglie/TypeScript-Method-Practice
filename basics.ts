@@ -167,4 +167,8 @@ example.apply(1, [2, 3, 4]);
 
 // --------------------------------------------------
 
-// Fat arrow function
+// JavaScript is a Prototypal inheritance, but has Pseudo-Classical pattern
+// and Prototype pattern, the classical will be familiar if you come from
+// another languages and is actually having a class and then we create an instance
+// of that class. JavaScript is a prototypal like building an house on
+// another house.
