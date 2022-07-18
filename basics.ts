@@ -148,3 +148,23 @@ for (let prop of array) {
 }
 
 // --------------------------------------------------
+
+// Keyword this ( call(), apply())
+
+function example(b, c, d) {
+  // console.log(this); 1
+  // console.log(b); // 2
+  // console.log(c); // 3
+  // console.log(d); // 4
+}
+
+example.call(1, 2, 3, 4);
+example.apply(1, [2, 3, 4]);
+
+// Why call or apply?
+// if you want use apply when you want to call a function and for
+// example you want a sum of an array of number so use pass an array as a param
+
+// --------------------------------------------------
+
+// Fat arrow function
