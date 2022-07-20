@@ -220,3 +220,24 @@ class Student extends Person {
 
 let asi = new Student("Fabio", "dc", "programming");
 asi.whoAreYou(); // "Hi Im Fabio dc and im studying programming"
+
+// --------------------------------------------------
+
+// Asychronous programming
+
+// What is a callback?
+
+function doAsyncTask(cb) {
+  setTimeout(() => {
+    cb(null, "correct data");
+  }, 0);
+}
+doAsyncTask((err, data) => {
+  if (err) {
+    throw err;
+  } else {
+    console.log(message), data;
+  }
+});
+
+let message = "call";
