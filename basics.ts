@@ -172,3 +172,51 @@ example.apply(1, [2, 3, 4]);
 // another languages and is actually having a class and then we create an instance
 // of that class. JavaScript is a prototypal like building an house on
 // another house.
+
+// --------------------------------------------------
+
+// Class and extends features
+class Person {
+  firstName = "";
+  lastName = "";
+
+  constructor(firstName: string, lastName: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  set firstname(name: string) {
+    if (name === "") {
+      console.error("first name cannot be blank");
+    } else {
+      this.firstName = name;
+    }
+  }
+
+  fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+
+  whoAreYou() {
+    return `Hi I'm ${this.fullName()}`;
+  }
+}
+
+let asim = new Person("Fabio", "dc");
+asim.whoAreYou(); // "Hi Im Fabio dc"
+
+class Student extends Person {
+  course = "";
+
+  constructor(firstName: string, lastName: string, course: string) {
+    super(firstName, lastName);
+    this.course = course;
+  }
+
+  whoAreYou() {
+    return `${super.whoAreYou()} and i'm studying ${this.course}`;
+  }
+}
+
+let asi = new Student("Fabio", "dc", "programming");
+asi.whoAreYou(); // "Hi Im Fabio dc and im studying programming"
