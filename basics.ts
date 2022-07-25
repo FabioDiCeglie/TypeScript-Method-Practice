@@ -1,5 +1,7 @@
 // Does javascript pass variables by reference or by value?
 
+import { resolve } from "path";
+
 // Passing by value
 // means is passing a copy of A and anything you do inside that function
 // will not effect the var in the global scope
@@ -241,3 +243,17 @@ doAsyncTask((err, data) => {
 });
 
 let message = "call";
+
+// --------------------------------------------------
+
+// Promise all
+
+//  const doAsyncTask = (delay) => {
+//   return new Promise(resolve => setTimeout() => resolve(delay), delay)
+//  }
+
+// let promises = [doAsyncTask(1000), doAsyncTask(500), doAsyncTask(800)];
+
+// Promise.all(promises);
+
+// --------------------------------------------------
