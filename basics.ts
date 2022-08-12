@@ -257,3 +257,5 @@ let message = "call";
 // Promise.all(promises);
 
 // --------------------------------------------------
+
+// Async/await
