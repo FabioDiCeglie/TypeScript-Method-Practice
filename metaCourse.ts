@@ -74,3 +74,19 @@ var virtualPet = {
 console.log(virtualPet.sleepy); // true
 virtualPet.nap();
 console.log(virtualPet.sleepy); // false
+
+/// we can say that the Functional Programming paradigm works by keeping the data and functionality separate.
+/// It's counterpart, OOP, works by keeping the data and functionality grouped in meaningful objects.
+
+/// ------------------ OOP
+
+var purchase = {
+  shoes: 100,
+  stateTax: 1.2,
+  totalPrice: function () {
+    var calculation = this.shoes * this.stateTax;
+    console.log(calculation);
+  },
+};
+
+purchase.totalPrice(); //120
