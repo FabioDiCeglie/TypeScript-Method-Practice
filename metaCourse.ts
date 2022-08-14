@@ -36,3 +36,15 @@ function letterFinder(word, match) {
 }
 letterFinder([], []);
 letterFinder("cat", "c");
+
+// ----------- functional programming
+
+const currencyOne = 100;
+let currencyTwo = 0;
+const exchangeRate = 1.2;
+
+function convertCurrency(amount: number, rate: number) {
+  return amount * rate;
+}
+
+currencyTwo = convertCurrency(currencyOne, exchangeRate);
