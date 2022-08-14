@@ -62,3 +62,15 @@ function example() {
 
 // Recursion is an alternative way to run repetitive code
 // without the use of loops
+
+// --------------- object-oriented programming (OOP)
+
+var virtualPet = {
+  sleepy: true,
+  nap: function () {
+    this.sleepy = false;
+  },
+};
+console.log(virtualPet.sleepy); // true
+virtualPet.nap();
+console.log(virtualPet.sleepy); // false
