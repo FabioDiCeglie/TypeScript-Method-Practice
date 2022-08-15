@@ -113,3 +113,22 @@ var baldEagle = new Eagle();
 var kingPenguin = new Penguin();
 baldEagle.useWings(); // "Flying! Barely flapping!"
 kingPenguin.useWings(); // "Diving!"
+
+// Inheritance in JavaScript
+
+const bird = {
+  hasWings: true,
+  canFly: true,
+  hasFeathers: true,
+};
+
+let penguin1 = Object.create(bird);
+penguin1.canFly = false;
+console.log(penguin1.canFly); // false
+console.log(penguin1.hasWings); // true
+
+// Default Parameters
+
+function withDefaultParams(number = 10) {
+  console.log("Result:", number * number);
+}
