@@ -178,3 +178,17 @@ var clothingItem = {
 for (var key of Object.keys(clothingItem)) {
   console.log(key, ":", clothingItem[key]);
 }
+
+// how to access an object's member using the brackets notation.
+
+function testBracketsDynamicAccess() {
+  var dynamicKey = Math.random() > 0.5 ? "speed" : "color";
+
+  var drone = {
+    speed: 15,
+    color: "orange",
+  };
+
+  console.log(drone[dynamicKey]);
+}
+testBracketsDynamicAccess();
