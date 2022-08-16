@@ -192,3 +192,25 @@ function testBracketsDynamicAccess() {
   console.log(drone[dynamicKey]);
 }
 testBracketsDynamicAccess();
+
+// for-in and for-of
+
+const car = {
+  engine: true,
+};
+const sportsCar = Object.create(car);
+sportsCar.speed = "fast";
+
+// for in iterate over the properties of the object and its prototype
+// @ts-ignore
+for (prop in sportsCar) {
+  // @ts-ignore
+  console.log(prop); // speed engine
+}
+
+// for of iterate over only for the objects properties
+// @ts-ignore
+for (prop of sportsCar) {
+  // @ts-ignore
+  console.log(prop + ": " + sportsCar[prop]); // speed : fast
+}
