@@ -263,3 +263,45 @@ function manager() {
   work.doSomethingFun();
   return work;
 }
+
+// Challenge 2
+
+// Task 1
+var dairy = [
+  "cheese",
+  "sour cream",
+  "milk",
+  "yogurt",
+  "ice cream",
+  "milkshake",
+];
+
+function logDairy() {
+  for (var string of dairy) {
+    console.log(string);
+  }
+}
+logDairy();
+// Task 2
+const animal = {
+  canJump: true,
+};
+
+const birddd = Object.create(animal);
+
+bird.canFly = true;
+
+bird.hasFeathers = true;
+function birdCan() {
+  for (const [key, value] of Object.entries(bird)) {
+    console.log(`${key}: ${value}`);
+  }
+}
+birdCan();
+// Task 3
+function animalCan() {
+  for (var property in bird) {
+    console.log(`${property}: ${bird[property]}`);
+  }
+}
+animalCan();
