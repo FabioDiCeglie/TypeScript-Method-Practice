@@ -222,7 +222,6 @@ class Person {
   name: string;
   age: number;
   energy: number;
-
   constructor(name = "Tom", age = 20, energy = 100) {
     this.name = name;
     this.age = age;
@@ -237,7 +236,9 @@ class Person {
 }
 
 // Task 2: Code a Worker classc
-class Worker extends Person {
+class Work extends Person {
+  xp: number;
+  hourlyWage: number;
   constructor(xp = 0, hourlyWage = 10, name = "Alice", age = 30, energy = 120) {
     super(name, age, energy);
     this.xp = xp;
@@ -250,7 +251,7 @@ class Worker extends Person {
 
 // Task 3: Code an intern object, run methods
 function intern() {
-  let work = new Worker(0, 10, "Bob", 21, 110);
+  let work = new Work(0, 10, "Bob", 21, 110);
   work.gotToWork();
   return work;
 }
@@ -258,7 +259,7 @@ console.log(intern());
 
 // Task 4: Code a manager object, methods
 function manager() {
-  let work = new Worker(100, 30, "Alice", 30, 120);
+  let work = new Work(100, 30, "Alice", 30, 120);
   work.doSomethingFun();
   return work;
 }
